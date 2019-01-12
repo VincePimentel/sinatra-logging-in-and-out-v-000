@@ -22,16 +22,14 @@ class ApplicationController < Sinatra::Base
     erb :error
   end
 
-  get '/account' do
-    binding.pry
+  get '/account' do    
+    user = User.find(session[:user_id])
     
-    # user = User.find(session[:user_id])
-    # 
-    # if user
-    #   erb :account
-    # else
-    #   erb :error
-    # end
+    if user
+      erb :account
+    else
+      erb :error
+    end
   end
 
   get '/logout' do
