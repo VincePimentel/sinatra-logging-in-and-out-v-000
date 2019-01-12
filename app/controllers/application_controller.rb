@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
       session[:user_id] = user.id
 
       #erb :account
-      redirect "/account"      
+      redirect "/account"
     end
     erb :error
   end
@@ -27,9 +27,9 @@ class ApplicationController < Sinatra::Base
 
     if user
       erb :account
-    else
-      erb :error
     end
+
+    erb :error
   end
 
   get '/logout' do
