@@ -25,6 +25,8 @@ class ApplicationController < Sinatra::Base
 
   get '/account' do
     @session = Helpers.new
+
+    erb :account
   end
 
   get '/logout' do
