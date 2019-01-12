@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    @session = Helper.new
+    @session = Helpers.new
   end
 
   get '/logout' do
