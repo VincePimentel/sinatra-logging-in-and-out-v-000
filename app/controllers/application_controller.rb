@@ -20,8 +20,6 @@ class ApplicationController < Sinatra::Base
     else
       erb :error
     end
-
-
   end
 
   get '/account' do
