@@ -8,9 +8,9 @@
   <body id="page-top">
     <p><a href="/logout">Log Out</a></p>
 
-    <% if @session.is_logged_in? %>
-      <h2>Welcome, <%= @session.current_user.username %>!</h2>
-      <h2>Balance: <%= @session.current_user.balance %></h2>
+    <% if Helpers.is_logged_in?(session) %>
+      <h2>Welcome, <%= Helpers.current_user(session).username %>!</h2>
+      <h2>Balance: <%= Helpers.current_user(session).balance %></h2>
     <% end %>
     
   </body>
